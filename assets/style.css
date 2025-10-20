@@ -1,0 +1,167 @@
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Section Layout */
+.sectionBlockLayout {
+  width: 100%;
+  padding: 10px 0; /* light vertical spacing */
+  background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container.custom-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Column Layout */
+.columnBlockLayout {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0; /* minimal spacing */
+}
+
+/* Headings */
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #003366;
+  text-align: center;
+  margin: 0; /* no extra margin */
+}
+
+/* Buttons Wrapper */
+.buttons .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* space between buttons */
+}
+
+/* Buttons */
+.button1 {
+  background-color: #002E61;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0 40px; /* fjern vertikal padding */
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 200px;
+  height: 60px; /* brug height i stedet for min-height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button1:hover {
+  background-color: #03BDCD;
+  transform: translateY(-2px);
+}
+
+.button1.active:hover {
+  background-color: #009933 !important;
+  transform: none; /* optional: stops jump effect */
+}
+
+.languageBtn.active,
+.identityBtn.active {
+  background-color: #009933 !important;
+}
+
+.navbar-brand img[src*="Indorama400.png"] {
+  height: 80px !important;
+  margin: 0 auto;
+  display: block;
+}
+
+.navbar-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.site-header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.siteTitle {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sectionHeading {
+    font-size: 1.8rem;
+  }
+
+  .buttons .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button1 {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .navbar-brand {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .siteTitle {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .navbar-brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Mindre luft mellem logo og tekst på mobil */
+  }
+
+  .navbar-brand img[src*="Indorama400.png"] {
+    display: block;
+    margin: 0 auto;
+    height: 80px !important;
+  }
+
+  .siteTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0; /* Fjern evt. ekstra margin */
+  }
+
+  .navbar-toggler,
+  .custom-navbar-toggler {
+    display: none;
+  }
+}
